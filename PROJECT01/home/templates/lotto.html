@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>오늘의 로또 번호</h1>
+    <hr>
+    
+    {% for lotto in lottos %}
+        <p>{{ lotto }}</p>
+    {% endfor %}
+    <hr>
+    
+    <p>컴식이가 뽑은 로또 번호: {{ lottos }}</p>
+    <p>진짜 로또 번호: {{ real_lottos }}</p>
+    <hr>
+    
+    {% if lottos == real_lottos %}
+        <p>당첨!</p>
+    {% else %}
+        <p>야근!</p>
+    {% endif %}
+    
+    
+</body>
+</html>

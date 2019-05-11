@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>오늘의 야식 메뉴는 {{ dinner }}입니다.</h1>
+    
+    {% for menu in menus %}
+        <p>{{ menu }}</p>
+    {% endfor %}
+    <hr>
+    
+    {% if dinner == '순대국' %}
+        <p>순대국은 소주!</p>
+    {% else %}
+        <p>그냥...</p>
+    {% endif %}
+</body>
+</html>
